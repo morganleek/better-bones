@@ -1,0 +1,109 @@
+@use "../components/colors";
+@use "../components/mixins";
+@use "../blocks/blocks";
+
+@mixin global-width-default {
+	width: calc(100vw - 2 * var(--global--horizontal-margin));
+	max-width: var(--global--max-width-normal);
+	margin-right: auto;
+	margin-left: auto;
+	&.has-background {
+		padding: var(--global--vertical-margin) var(--global--horizontal-margin);
+		max-width: calc(var(--global--max-width-normal) + var(--global--horizontal-margin) * 2);
+	}
+}
+@mixin global-width-wide {
+	width: calc(100vw - 2 * var(--global--horizontal-margin));
+	max-width: var(--global--max-width-wide);
+	margin-right: auto;
+	margin-left: auto;
+}
+@mixin global-width-full {
+	width: 100vw;
+	max-width: var(--global--max-width-full);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@mixin global-alignments {
+	.alignnone,
+	.aligncenter,
+	.alignleft,
+	.alignright,
+	.alignwide {
+		margin-top: var(--global--vertical-margin);
+		margin-bottom: var(--global--vertical-margin);
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	/* Full */
+	.alignfull {
+		// For gapless full blocks
+		// margin-top: var(--global--vertical-margin);
+		// margin-bottom: var(--global--vertical-margin);
+		@include global-width-full;
+		position: relative;
+	}
+
+	/* Wide */
+	[data-align="wide"],
+	.alignwide {
+		@include global-width-wide;
+	}
+
+	/* Center */
+	.aligncenter,
+	.aligncenter img {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Left and right */
+	.alignleft,
+	.alignright {
+		max-width: 50%;
+	}
+
+	.alignleft {
+		float: left;
+		margin: calc(var(--global--vertical-margin) / 4) calc(var(--global--vertical-margin) / 2) calc(var(--global--vertical-margin) / 2) 0;
+	}
+
+	.alignright {
+		float: right;
+		margin: calc(var(--global--vertical-margin) / 4) 0 calc(var(--global--vertical-margin) / 2) calc(var(--global--vertical-margin) / 2);
+	}
+	
+	/* Entry Media */
+	
+	.alignfull > figcaption,
+	.alignfull > .wp-caption-text {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	[class*="__inner-container"] {
+		& > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+			max-width: var(--global--max-width-normal);
+			width: 100%;
+		}
+		& > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		& > .alignfull {
+			max-width: 100%;
+		}
+		& > .alignwide {
+			width: 100%;
+		}
+	}
+
+	[data-align="wide"],
+	[data-align="full"] {
+		& > *:first-child {
+			margin-top: 0;
+		}
+	}
+}

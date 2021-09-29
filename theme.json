@@ -1,0 +1,125 @@
+{
+	"version": 1,
+	"settings": {
+		"color": {
+			"custom": false,
+			"customDuotone": false,
+			"customGradient": false,
+			"duotone": [],
+			"gradients": [],
+			"link": false,
+			"palette": [
+				{
+					"name": "Black",
+					"slug": "black",
+					"color": "#000000"
+				},
+				{
+					"name": "Grey",
+					"slug": "grey",
+					"color": "#1D1D1D"
+				},
+				{
+					"name": "Light grey",
+					"slug": "light-grey",
+					"color": "#F9F9F9"
+				},
+				{
+					"name": "Yellow",
+					"slug": "yellow",
+					"color": "#F5FF75"
+				},
+				{
+					"name": "Paragraph",
+					"slug": "paragraph",
+					"color": "#717171"
+				},
+				{
+					"name": "White",
+					"slug": "white",
+					"color": "#FFFFFF"
+				}
+			]
+		},
+		"typography": {
+			"customFontSize": false,
+			"customLineHeight": false,
+			"dropCap": false,
+			"fontSizes": [
+				{
+					"name": "Introduction", 
+					"size":  "clamp(2rem, 1.7087rem + 0.7767vw, 3.2rem)",
+					"slug":  "introduction"
+				}
+			]
+		},
+		"custom": {},
+		"layout": {
+			"contentSize": "1456px",
+			"wideSize": "1920px"
+		},
+		"spacing": {
+				"customMargin": false,
+				"customPadding": false,
+				"units": [ "px", "em", "rem", "vh", "vw" ]
+		},
+		"blocks": {
+			"core/button": {
+				"border": {
+					"customRadius": false
+				}
+			},
+			"core/image": {
+				"styles": []
+			}
+		}
+	},
+	"styles": {
+		"typography": {
+			"fontSize": "clamp(1.4rem, 1.3515rem + 0.1294vw, 1.6rem)"
+		},
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontSize": "clamp(3.4rem, 2.5262rem + 2.3301vw, 7rem)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "clamp(2.4rem, 1.8660rem + 1.4239vw, 4.6rem)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "clamp(2rem, 1.7087rem + 0.7767vw, 3.2rem)"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontSize": "clamp(1.8rem, 1.6544rem + 0.3883vw, 2.4rem)"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontSize": "clamp(1.6rem, 1.5515rem + 0.1294vw, 1.8rem)"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontSize": "clamp(1.4rem, 1.3515rem + 0.1294vw, 1.6rem)"
+				}
+			}
+		}
+	},
+	"customTemplates": {},
+	"templateParts": [
+		{
+			"name": "header",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"area": "footer"
+		}
+	]
+}

@@ -1,0 +1,26 @@
+@use "alignment";
+@use "../blocks/blocks";
+
+// Editor
+body {
+	// Blocks wrapper
+	& > .edit-post-visual-editor__post-title-wrapper,
+	& > .block-editor-block-list__layout.is-root-container {
+		@include alignment.global-alignments;
+		// Blocks
+		@include blocks.core;
+		
+		*:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide):not([data-align="wide"]):not([data-align="full"]) {
+			@include alignment.global-width-default;
+		}
+	}
+	
+	// Title wrapper
+	& > .edit-post-visual-editor__post-title-wrapper {
+		.editor-post-title .editor-post-title__input {
+			border: 0 none !important;
+			padding-left: 0 !important;
+			padding-right: 0 !important;
+		}
+	}
+}

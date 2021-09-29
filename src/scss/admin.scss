@@ -1,0 +1,35 @@
+// Core components
+@use 'components/reset';
+@use 'components/globals';
+@use 'components/colors';
+@use 'components/type';
+@use 'components/accessibility';
+
+@use 'blocks/blocks';
+
+// Layout
+@forward 'layout/editor';
+
+// Plugins
+@use 'plugins/wp-everything-image';
+@use 'plugins/wpcf7';
+
+body {
+  @include type.base;
+
+	:root {
+		font-size: 10px;
+	}
+}
+
+// editor header styles
+.edit-post-visual-editor__post-title-wrapper {
+	border-bottom: 1px solid #c0c0c0;
+	.editor-post-title .editor-post-title__input {
+		padding: 0.5em 0;
+    font-size: 1.5em;
+    border: 1px dashed #c0c0c0;
+    padding-left: 0.5em;
+	}
+}
+

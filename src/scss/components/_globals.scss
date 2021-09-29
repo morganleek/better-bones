@@ -1,0 +1,25 @@
+:root {
+  font-size: 10px;
+  
+  // Globals
+  
+  // Margins
+  --global--horizontal-margin: 2rem;
+  --global--vertical-margin: 2rem;
+
+  // Widths
+  --global--max-width-normal: 100rem;
+  --global--max-width-wide: 120rem;
+  --global--max-width-full: 100vw;
+
+  // Fonts
+  // Heading sizes are managed in theme.json
+
+  // Margins
+  @media (min-width: 992px) { 
+    --global--horizontal-margin: 5rem;
+    --global--vertical-margin: 3rem;
+  }
+}
+
+

@@ -1,0 +1,19 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.post-edit-link {
+  display: none;
+}

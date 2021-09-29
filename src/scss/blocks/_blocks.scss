@@ -1,0 +1,116 @@
+@mixin trim-first-and-last() {
+	// & > #{$container} > *:first-child {
+	// 	margin-top: 0;
+	// }
+
+	// & > #{$container} > *:last-child:not(.block-list-appender) {
+	// 	margin-bottom: 0;
+	// }
+
+	// &.has-child-selected > #{$container} > *:nth-last-child(2),
+	// &.is-selected > #{$container} > *:nth-last-child(2) {
+	// 	margin-bottom: 0;
+	// }
+	& > * {
+		&:first-child {
+			margin-top: 0 !important;
+		}
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+}
+// @use "../layout/alignment";
+
+// core gutenberg items
+@mixin core {
+  @include wp-block-cover;
+  @include wp-block-image;
+  @include wp-block-media-text;
+  @include wp-block-columns;
+  @include wp-block-column;
+  @include wp-block-buttons;
+  @include wp-block-quote;
+  @include wp-block-group;
+  @include wp-block-navigation;
+  @include wp-block-latest-posts__list;
+  @include wp-block-gallery;
+  // @include wp-block-custom-block;
+}
+
+@mixin wp-block-cover {
+  .wp-block-cover {}
+}
+
+@mixin wp-block-image {
+  .wp-block-image {
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+}
+
+@mixin wp-block-columns {
+  .wp-block-columns {}
+}
+
+@mixin wp-block-column {
+  .wp-block-column {}
+}
+
+@mixin wp-block-buttons {
+  .wp-block-buttons {
+    .wp-block-button {
+      margin: 0;
+      .wp-block-button__link {
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+@mixin wp-block-quote {
+  .wp-block-quote {
+    p {
+      font-size: 2rem;
+    }
+  }
+}
+
+@mixin wp-block-media-text {
+  .wp-block-media-text_content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@mixin wp-block-group {
+  .wp-block-group {
+    @include trim-first-and-last;
+    
+    &.has-background {
+      padding: var(--global--vertical-margin) var(--global--horizontal-margin);
+    }
+    // &.alignfull {
+    //   padding-left: var(--global--horizontal-margin);
+    //   padding-right: var(--global--horizontal-margin);
+    // }
+  }
+}
+
+@mixin wp-block-navigation {
+  .wp-block-navigation {}
+}
+
+@mixin wp-block-latest-posts__list {
+  .wp-block-latest-posts__list {}
+}
+
+@mixin wp-block-gallery {
+  .wp-block-gallery {}
+}
+
+// @mixin wp-block-wp-block-custom-block {
+//   .wp-block-wp-block-custom-block {}
+// }

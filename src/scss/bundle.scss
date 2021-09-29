@@ -1,0 +1,31 @@
+// Core components
+@use 'components/reset';
+@use 'components/globals';
+@use 'components/colors';
+@use 'components/type';
+@use 'components/mixins';
+@use 'components/accessibility';
+
+// Layout
+@forward 'layout/header';
+@forward 'layout/content';
+@forward 'layout/footer';
+
+// Plugins
+@use 'plugins/wp-everything-image';
+@use 'plugins/wpcf7';
+@use 'plugins/hamburgers';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  // Core Elements
+  @include type.base;
+  @include type.form;
+
+  // Plugins
+  @extend %wpcf7;
+  @extend %wp-everything-image !optional; 
+}
