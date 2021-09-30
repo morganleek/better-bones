@@ -1,21 +1,21 @@
 {
-  "name": "good-bones",
+  "name": "better-bones",
   "version": "1.0.0",
-  "description": "Good Bones is an empty framework to build Wordpress themes with Gutenberg",
+  "description": "Better Bones is an empty framework to build Wordpress themes with Gutenberg",
   "main": "gulpfile.babel.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/morganleek/good-bones.git"
+    "url": "git+https://github.com/morganleek/better-bones.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/morganleek/good-bones/issues"
+    "url": "https://github.com/morganleek/better-bones/issues"
   },
-  "homepage": "https://github.com/morganleek/good-bones#readme",
+  "homepage": "https://github.com/morganleek/better-bones#readme",
   "devDependencies": {
     "@babel/core": "^7.14.0",
     "@babel/preset-env": "^7.14.1",

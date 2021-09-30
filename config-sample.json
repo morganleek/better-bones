@@ -6,9 +6,9 @@
 		"open": true
 	},
 	"theme": {
-		"title": "Good Bones",
+		"title": "Better Bones",
 		"description": "Custom Wordpress theme",
-		"folder": "good-bones-build",
-		"script": "good_bones"
+		"folder": "better-bones-build",
+		"script": "better_bones"
 	}
 }
