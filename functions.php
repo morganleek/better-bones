@@ -7,3 +7,4 @@
   require get_theme_file_path( '/inc/fonts.php' );
   require get_theme_file_path( '/inc/images.php' );
   require get_theme_file_path( '/inc/rest.php' );
+  require get_theme_file_path( '/inc/templates.php' );

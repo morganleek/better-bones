@@ -1,13 +1,26 @@
 @use "../layout/alignment";
 
 header#header {
-	@include alignment.global-width-default;
+	& > * {
+		width: var(--element--width);
+		max-width: var(--element--max-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-	& > .inner {
+	.inner {
 		display: grid;
 		grid-template-columns: auto auto;
+		align-items: end;
 	}
 	
+	// Logo
+	#site-logo {
+		font-size: 3rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;;
+	}
+
 	// Navigation
 	nav {
 		display: none;

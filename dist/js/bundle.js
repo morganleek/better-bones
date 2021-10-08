@@ -141,7 +141,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/morganleek/Sites/word.ernie/wp-content/themes/good-bones/src/js/bundle.js */"./src/js/bundle.js");
+module.exports = __webpack_require__(/*! /Volumes/VM Drives/Sites/wordpress/wp-content/themes/better-bones/src/js/bundle.js */"./src/js/bundle.js");
 
 
 /***/ }),

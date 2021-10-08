@@ -21,6 +21,9 @@
 }
 
 body {
+  // Colours
+  background-color: var(--wp--preset--color--white);
+
   // Core Elements
   @include type.base;
   @include type.form;

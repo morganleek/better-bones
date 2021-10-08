@@ -1,3 +1,15 @@
+
+@mixin trim {
+	& > * {
+		&:first-child {
+			margin-top: 0 !important;
+		}
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+	}
+}
+
 // @mixin width( $max-width ) {
 // 	max-width: $max-width;
 // 	width: calc(100% - (var(--global--horizontal-margin) * 2));

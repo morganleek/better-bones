@@ -1,25 +1,29 @@
 :root {
   font-size: 10px;
   
-  // Globals
-  
   // Margins
-  --global--horizontal-margin: 2rem;
-  --global--vertical-margin: 2rem;
+	--element--horizontal-margin: 3rem;
+	--element--horizontal-margin-small: 2rem;
+	--element--vertical-margin: 3rem;
 
-  // Widths
-  --global--max-width-normal: 100rem;
-  --global--max-width-wide: 120rem;
-  --global--max-width-full: 100vw;
+	// Widths
+	--element--width: calc( 100% - ( 2 * var(--element--horizontal-margin) ) );
+	--element--max-width: calc( 120rem + 1px );
+	--element--max-width-wide: 140rem;
+	--element--max-width-full: none;
 
-  // Fonts
-  // Heading sizes are managed in theme.json
+	// Blocks
 
-  // Margins
-  @media (min-width: 992px) { 
-    --global--horizontal-margin: 5rem;
-    --global--vertical-margin: 3rem;
-  }
+	// .wp-block-buttons
+	--element--button-radius: 0;
+	--element--button-vertical-margin: 2rem;
+
+  // .wp-block-image
+	--element--aligned-image-margin: 2rem;
+
+  // .wp-block-gb-block-posts
+  --element--gp-posts-row-gap: 1.5rem;
+  --element--gp-posts-column-gap: 2rem;
 }
 
 

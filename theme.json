@@ -55,11 +55,11 @@
 		},
 		"custom": {},
 		"layout": {
-			"contentSize": "1456px",
-			"wideSize": "1920px"
+			"contentSize": "120rem",
+			"wideSize": "140rem"
 		},
 		"spacing": {
-				"customMargin": false,
+				"customMargin": true,
 				"customPadding": false,
 				"units": [ "px", "em", "rem", "vh", "vw" ]
 		},

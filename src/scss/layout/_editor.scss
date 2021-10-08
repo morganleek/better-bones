@@ -1,18 +1,66 @@
 @use "alignment";
 @use "../blocks/blocks";
+@use "../blocks/blocks-editor";
+
+// :root {
+// 	--element--width: calc( 100% - ( 2 * var(--element--horizontal-margin) ) )
+// }
 
 // Editor
 body {
 	// Blocks wrapper
 	& > .edit-post-visual-editor__post-title-wrapper,
 	& > .block-editor-block-list__layout.is-root-container {
-		@include alignment.global-alignments;
-		// Blocks
-		@include blocks.core;
-		
-		*:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide):not([data-align="wide"]):not([data-align="full"]) {
-			@include alignment.global-width-default;
+		& > * {
+			width: var(--element--width);
 		}
+		* {
+			max-width: var(--element--max-width);
+			margin-left: auto;
+			margin-right: auto;
+			&[class^="wp-block-"] {
+				margin-top: var(--element--vertical-margin);
+				margin-bottom: var(--element--vertical-margin);
+				&.alignwide,
+				&.alignfull {
+					&.has-background {
+						margin-top: 0;
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		// block-editor-block-list__block wp-block is-selected wp-block-columns
+		// & > * { // :not(.block-editor-block-list__block)
+		// 	* {
+		// 		width: auto;
+		// 	}
+		// }
+	
+		[data-align="full"] {
+			max-width: var(--element--max-width-full);
+			width: 100%;
+		}
+		[data-align="wide"] {
+			max-width: var(--element--max-width-wide);
+		}
+		
+		// .block-variation-picker__variations.block-editor-block-variation-picker__variations
+		// .components-placeholder {
+		// 	width: 100%;
+		// 	.components-placeholder__fieldset { 
+		// 		width: 100%;
+		// 	}
+		// }
+		// .components-placeholder,
+		// .components-placeholder.components-placeholder,
+		// .components-placeholder.components-placeholder .components-placeholder__fieldset {
+		// 	width: 100%;
+		// }
+	
+		// Blocks
+		@include blocks.core;	
+		@include blocks-editor.core;	
 	}
 	
 	// Title wrapper
@@ -21,6 +69,7 @@ body {
 			border: 0 none !important;
 			padding-left: 0 !important;
 			padding-right: 0 !important;
+			width: 100% !important;
 		}
 	}
 }

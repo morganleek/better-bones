@@ -1,0 +1,110 @@
+// @use "../components/mixins";
+
+// core gutenberg items
+@mixin core {
+	@include wp-block;
+  @include wp-block-cover;
+  @include wp-block-image;
+  @include wp-block-media-text;
+  @include wp-block-columns;
+  @include wp-block-buttons;
+  @include wp-block-quote;
+  @include wp-block-group;
+  @include wp-block-navigation;
+  @include wp-block-latest-posts__list;
+  @include wp-block-gallery;
+  // @include wp-block-custom-block;
+}
+
+@mixin wp-block {
+	.wp-block {
+		// [data-align="left"],
+		&[data-align="full"] {
+			& > * {
+				max-width: var(--element--max-width-full);
+				width: 100%;
+			}
+		}
+		&[data-align="wide"] {
+			& > * {
+				max-width: var(--element--max-width-wide);
+				width: 100%;
+			}
+		}
+		&[data-align="left"] {
+			float: none;
+			figure {
+				float: left;
+				margin-left: 0;
+				margin-right: var(--element--aligned-image-margin);
+			}
+		}
+		&[data-align="right"] {
+			float: none;
+			figure {
+				margin-left: var(--element--aligned-image-margin);
+				margin-right: 0;
+			}
+		}
+		figure {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
+@mixin wp-block-cover {
+  .wp-block-cover {}
+}
+
+@mixin wp-block-image {
+  .wp-block-image {
+		
+	}
+}
+
+@mixin wp-block-columns {
+  .wp-block-columns {
+		.wp-block-column {}
+	}
+}
+
+@mixin wp-block-buttons {
+  .wp-block-buttons {
+		.wp-block-button {
+			.wp-block-button__link {}
+		}
+	}
+}
+
+@mixin wp-block-quote {
+  .wp-block-quote {
+    // p {}
+  }
+}
+
+@mixin wp-block-media-text {
+  .wp-block-media-text_content {}
+}
+
+@mixin wp-block-group {
+  .wp-block-group {
+		&.has-background {}
+	}
+}
+
+@mixin wp-block-navigation {
+  .wp-block-navigation {}
+}
+
+@mixin wp-block-latest-posts__list {
+  .wp-block-latest-posts__list {}
+}
+
+@mixin wp-block-gallery {
+  .wp-block-gallery {}
+}
+
+// @mixin wp-block-wp-block-custom-block {
+//   .wp-block-wp-block-custom-block {}
+// }

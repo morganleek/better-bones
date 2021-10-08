@@ -67,6 +67,12 @@
   function _themename_register_block_styles() {
     // Add styles
 
+    // Media & Text
+    register_block_style( 'core/media-text', [
+      'name' => 'stacked',
+      'label' => __( 'Stacked', '_themename' ),
+    ] );
+    
     // Cover
     // register_block_style( 'core/cover', [
     //   'name' => 'banner-reversed',
