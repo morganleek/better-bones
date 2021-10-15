@@ -17,6 +17,9 @@
     // remove patterns 
     remove_theme_support( 'core-block-patterns' );
 
+    // responsive embedded content.
+		add_theme_support( 'responsive-embeds' );
+
     // custom spacing 
     // add_theme_support( 'custom-spacing' );
 

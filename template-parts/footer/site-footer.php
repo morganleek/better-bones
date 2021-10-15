@@ -4,12 +4,15 @@
 		<nav>
 			<?php 
 				_themename_nav( array( 
-					'theme_location' => 'header'
+					'theme_location' => 'footer'
 				) );
 			?>
 		</nav>
-		<div id="copyright">
+		<div class="copyright">
 			<p>&copy; <?php print date( 'Y' ); ?></p>
+		</div>
+		<div class="credit">
+			<p>Designer Credit</p>
 		</div>
 	</div>
 </footer><!-- #colophon -->

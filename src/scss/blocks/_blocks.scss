@@ -11,8 +11,11 @@
   @include wp-block-group;
   @include wp-block-navigation;
   @include wp-block-latest-posts__list;
+	@include wp-block-media;
+	@include wp-block-embed;
   @include wp-block-gallery;
 	@include wp-block-gb-block-posts;
+	@include wp-embed-responsive;
   // @include wp-block-custom-block;
 }
 
@@ -157,3 +160,65 @@
 // @mixin wp-block-wp-block-custom-block {
 //   .wp-block-wp-block-custom-block {}
 // }
+
+@mixin wp-block-media {
+	.wp-block-media {
+
+	}
+}
+
+@mixin wp-block-embed {
+	.wp-block-embed {
+		// width: fit-content;
+	// 	.wp-block-embed__wrapper {
+	// 		position: relative;
+	// 		max-width: none;
+	// 	}
+	// 	iframe {
+	// 		max-width: 100%;
+	// 	}
+	}
+}
+
+@mixin wp-embed-responsive {
+	// .wp-embed-responsive {
+	// 	.wp-has-aspect-ratio {
+	// 		.wp-block-embed__wrapper:before {
+	// 			content: "";
+	// 			display: block;
+	// 			padding-top: 50%
+	// 		}
+	// 		iframe {
+	// 			position: absolute;
+	// 			top: 0;
+	// 			right: 0;
+	// 			bottom: 0;
+	// 			left: 0;
+	// 			height: 100%;
+	// 			width: 100%
+	// 		}
+	// 		&.wp-embed-aspect-21-9 .wp-block-embed__wrapper:before {
+	// 			padding-top: 42.85%
+	// 		}	
+	// 		&.wp-embed-aspect-18-9 .wp-block-embed__wrapper:before {
+	// 			padding-top: 50%
+	// 		}	
+	// 		&.wp-embed-aspect-16-9 .wp-block-embed__wrapper:before {
+	// 			padding-top: 56.25%
+	// 		}	
+	// 		&.wp-embed-aspect-4-3 .wp-block-embed__wrapper:before {
+	// 			padding-top: 75%
+	// 		}	
+	// 		&.wp-embed-aspect-1-1 .wp-block-embed__wrapper:before {
+	// 			padding-top: 100%
+	// 		}	
+	// 		&.wp-embed-aspect-9-16 .wp-block-embed__wrapper:before {
+	// 			padding-top: 177.77%
+	// 		}	
+	// 		&.wp-embed-aspect-1-2 .wp-block-embed__wrapper:before {
+	// 			padding-top: 200%
+	// 		}
+	// 	}
+	// }
+}
+

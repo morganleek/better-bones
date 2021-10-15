@@ -25,84 +25,62 @@
 // }
 
 @mixin type {
-  font-family: sans-serif;
-  line-height: 1.3em;
+  
 }
 
 // Gutenberg Inline Sizes
-@mixin gutenberg-inline-font-sizes {
-  .has-small-font-size,
-  &.has-small-font-size {
-    font-size: calc(0.8 * var(--content-font-size)); 
-  }
-  .has-large-font-size,
-  &.has-large-font-size {
-    font-size: calc(1.2 * var(--content-font-size)); 
-  }
-}
+// @mixin gutenberg-inline-font-sizes {
+//   .has-small-font-size,
+//   &.has-small-font-size {
+//     // font-size: calc(0.8 * var(--content-font-size)); 
+//     font-size: 80%;
+//   }
+//   .has-large-font-size,
+//   &.has-large-font-size {
+//     // font-size: calc(1.2 * var(--content-font-size)); 
+//     font-size: 120%;
+//   }
+// }
 
 // Headings
 @mixin heading {
   h1, h2, h3, h4, h5, h6 {
-    // @include custom-font-family-normal;
-    margin: 0.65em 0;
-    line-height: 1.3em;
-    color: var(--gb-heading);
+    font-family: var(--element--heading-font);
+    margin-top: var(--element--heading-margin);
+    margin-bottom: var(--element--heading-margin);
+    line-height: var(--element--heading-line-height);
+    color: var(--element--heading-color);
+    font-weight: var(--element--heading-weight);
   }
-  @include h1;
-  @include h2;
-  @include h3;
-  @include h4;
-  @include h5;
-  @include h6;
-}
-@mixin h1 {
-  // h1 {}
-}
-@mixin h2 {
-  // h2 {}
-}
-@mixin h3 {
-  // h3 {}
-}
-@mixin h4 {
-  // h4 {}
-}
-@mixin h5 {
-  // h5 {}
-}
-@mixin h6 {
-  // h6 {}
-}
-
-// Paragraph
-@mixin paragraph {
-  @include type;
-	@include gutenberg-inline-font-sizes;
-  font-weight: normal;
-  margin: 1.3em 0;
-}
-
-// Blockquote
-@mixin blockquote {
-  p {
-    @include paragraph;
-  }
-  cite, .wp-block-pullquote__citation {
-    @include paragraph;
-  }  
+  h1 {}
+  h2 {}
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
 }
 
 // Base fonts
 @mixin base {
-  @include type;
+  // Base font
+  font-family: var(--element--paragraph-font);
+  font-weight: var(--element--paragraph-weight);
+  line-height: var(--element--paragraph-line-height);
+  margin-top: var(--element--paragrah-margin);
+  margin-bottom: var(--element--paragrah-margin);
+  color: var(--element--paragraph-color);
+  
+  // Headings 
   @include heading;
-  p, ol, ul, dl, dt, summary {
-    @include paragraph;
-  }
+
+  // Lists
   ol, ul, dl {
     li {
       margin-bottom: 0.5em;
+    }
+    ol, ul, dl {
+      margin-top: calc( var(--element--paragrah-margin) / 3 );
+      margin-bottom: calc( var(--element--paragrah-margin) / 3 );
     }
   }
   iframe {
@@ -112,15 +90,16 @@
     max-width: 100%;
     height: auto;
   }
-  blockquote {
-    @include blockquote;
-  }
+  // blockquote {
+  //   p {}
+  //   cite, .wp-block-pullquote__citation {}
+  // }
   a {
-    color: var(--gb-link);
+    color: var(--element--anchor-color);
     text-decoration: none;
     transition: color 0.3s;
     &:hover {
-			color: var(--gb-link-hover);
+			color: var(--element--anchor-color-hover);
 		}
   }
   // hr {}

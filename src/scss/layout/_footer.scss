@@ -1,13 +1,38 @@
-@use "../layout/alignment";
 
-footer {
-	@include alignment.global-width-default;
+footer#colophon {
+	& > * {
+		width: var(--element--width);
+		max-width: var(--element--max-width);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.inner {
+		display: grid;
+		grid-template-columns: auto auto;
+		align-items: end;
+	}
 	
+	// Logo
+	#site-logo {
+		font-size: 3rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;;
+	}
+
 	// Navigation
 	nav {
+		display: none;
+		@media (min-width: 768px) { 
+			display: block;
+		}
 		ul {
 			list-style: none;
 			padding-left: 0;
+			&:first-of-type {
+				display: flex;
+				justify-content: flex-end;
+			}
 		}
 		& > ul {
 			display: flex;
@@ -15,5 +40,13 @@ footer {
 				padding-right: 10px;
 			}
 		}
+	}
+
+	.copyright {
+		font-style: italic;
+	}
+
+	.credit {
+		text-align: right;
 	}
 }
