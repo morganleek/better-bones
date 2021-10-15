@@ -1,6 +1,10 @@
 :root {
   font-size: 10px;
   
+	/**
+	*  Layout
+	**/
+	
   // Margins
 	--element--horizontal-margin: 3rem;
 	--element--horizontal-margin-small: 2rem;
@@ -12,31 +16,35 @@
 	--element--max-width-wide: 140rem;
 	--element--max-width-full: none;
 
-	// Primitives
+	/**
+	*  Type
+	**/
+
+	// Paragraph
 	--element--paragrah-margin: 1.3em;
 	--element--paragraph-line-height: 1.4em;
 	--element--paragraph-color: #0c0c0c;
 	--element--paragraph-font: sans-serif;
 	--element--paragraph-weight: 400;
-	
+	// Headings
 	--element--heading-margin: 0.5em;
 	--element--heading-line-height: 1.3em;
 	--element--heading-color: #0e0e0e;
 	--element--heading-font: sans-serif;
 	--element--heading-weight: 600;
-
+	// Links
 	--element--anchor-color: #385E72;
 	--element--anchor-color-hover: #6AABD2;
 
-	// Blocks
+	/**
+	*  Blocks
+	**/
 
 	// .wp-block-buttons
 	--element--button-radius: 0;
 	--element--button-vertical-margin: 2rem;
-
   // .wp-block-image
 	--element--aligned-image-margin: 2rem;
-
   // .wp-block-gb-block-posts
   --element--gp-posts-row-gap: 1.5rem;
   --element--gp-posts-column-gap: 2rem;
