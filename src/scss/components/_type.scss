@@ -66,15 +66,31 @@
   font-family: var(--element--paragraph-font);
   font-weight: var(--element--paragraph-weight);
   line-height: var(--element--paragraph-line-height);
-  margin-top: var(--element--paragrah-margin);
-  margin-bottom: var(--element--paragrah-margin);
   color: var(--element--paragraph-color);
   
   // Headings 
   @include heading;
 
+  // Block Elements
+  p,
+  ul,
+  ol,
+  dl,
+  form,
+  blockquote,
+  canvas,
+  address,
+  hr,
+  pre,
+  table {
+    margin-top: var(--element--paragrah-margin);
+    margin-bottom: var(--element--paragrah-margin);
+  }
+
   // Lists
   ol, ul, dl {
+    margin-top: var(--element--paragrah-margin);
+    margin-bottom: var(--element--paragrah-margin);
     li {
       margin-bottom: 0.5em;
     }

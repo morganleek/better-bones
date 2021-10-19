@@ -24,12 +24,14 @@ body {
 
 // editor header styles
 .edit-post-visual-editor__post-title-wrapper {
-	border-bottom: 1px solid #c0c0c0;
-	.editor-post-title .editor-post-title__input {
-		padding: 0.5em 0;
-    font-size: 1.5em;
-    border: 1px dashed #c0c0c0;
-    padding-left: 0.5em;
+	border-bottom: 1px solid #e0e0e0;
+	.wp-block.editor-post-title.editor-post-title__block {
+		margin-top: 0;
+		.editor-post-title__input {
+			padding: 0.5em 0;
+			font-size: 1.5em;
+			padding-left: 0.5em;
+		}
 	}
 }
 
