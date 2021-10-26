@@ -20,7 +20,13 @@
 }
 
 @mixin wp-block-cover {
-  .wp-block-cover {}
+  .wp-block-cover {
+		.wp-block-cover__image-background {
+			margin-top: 0 !important;
+			margin-bottom: 0 !important;
+			max-width: none !important;
+		}
+	}
 }
 
 @mixin wp-block-image {
@@ -47,6 +53,8 @@
 
 @mixin wp-block-columns {
   .wp-block-columns {
+		margin-top: var(--element--vertical-margin);
+    margin-bottom: var(--element--vertical-margin);
 		.wp-block-column {
 			@include mixins.trim;
 			margin-top: 0;
@@ -140,7 +148,13 @@
 }
 
 @mixin wp-block-gallery {
-  .wp-block-gallery {}
+  .wp-block-gallery {
+		.blocks-gallery-grid {
+			.blocks-gallery-item {
+				margin: 0 1em 1em 0;
+			}
+		}
+	}
 }
 
 @mixin wp-block-gb-block-posts {
@@ -221,4 +235,3 @@
 	// 	}
 	// }
 }
-
