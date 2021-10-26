@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-$(function() {
+document.addEventListener( "DOMContentLoaded", () => {
 	// // Favicons
 	// const favicons = '<link rel="apple-touch-icon" sizes="180x180" href="%path%/apple-touch-icon.png">' +
 	// '<link rel="icon" type="image/png" sizes="192x192"  href="%path%/android-chrome-192x192.png">' +
