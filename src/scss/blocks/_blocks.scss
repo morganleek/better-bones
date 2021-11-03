@@ -21,61 +21,42 @@
 
 @mixin wp-block-cover {
   .wp-block-cover {
+		padding: 0;
 		.wp-block-cover__image-background {
 			margin-top: 0 !important;
 			margin-bottom: 0 !important;
 			max-width: none !important;
 		}
+		.wp-block-cover__inner-container {
+			padding-left: var(--element--horizontal-margin);
+			padding-right: var(--element--horizontal-margin);
+		}
 		&.has-custom-content-position {
+			&.alignfull {
+				padding-left: 0;
+				padding-right: 0;
+				.wp-block-cover__inner-container {
+					max-width: calc(( 100vw - var(--element--max-width) ) / 2 + var(--element--horizontal-margin) + var(--element--max-width));
+				}
+				&.is-position-top-right,
+				&.is-position-center-right,
+				&.is-position-bottom-right {
+					.wp-block-cover__inner-container {
+						padding-right: calc(( 100vw - var(--element--max-width) ) / 2 + var(--element--horizontal-margin));
+					}
+				}
+				&.is-position-top-left,
+				&.is-position-center-left,
+				&.is-position-bottom-left {
+					.wp-block-cover__inner-container {
+						padding-left: calc(( 100vw - var(--element--max-width) ) / 2 + var(--element--horizontal-margin));
+					}
+				}
+			}
 			.wp-block-cover__inner-container {
 				margin-left: 0;
 				margin-right: 0;
 			}
-			
-			// &.is-position-top-left {
-			// 	align-items: flex-start;
-			// 	justify-content: flex-start
-			// }
-		
-			// &.is-position-top-center {
-			// 	align-items: flex-start;
-			// 	justify-content: center
-			// }
-		
-			// &.is-position-top-right {
-			// 	align-items: flex-start;
-			// 	justify-content: flex-end
-			// }
-		
-			// &.is-position-center-left {
-			// 	align-items: center;
-			// 	justify-content: flex-start
-			// }
-		
-			// &.is-position-center-center {
-			// 	align-items: center;
-			// 	justify-content: center
-			// }
-		
-			// &.is-position-center-right {
-			// 	align-items: center;
-			// 	justify-content: flex-end
-			// }
-		
-			// &.is-position-bottom-left {
-			// 	align-items: flex-end;
-			// 	justify-content: flex-start
-			// }
-		
-			// &.is-position-bottom-center {
-			// 	align-items: flex-end;
-			// 	justify-content: center
-			// }
-		
-			// &.is-position-bottom-right {
-			// 	align-items: flex-end;
-			// 	justify-content: flex-end
-			// }
 		}
 	}
 	
