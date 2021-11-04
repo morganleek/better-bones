@@ -12,9 +12,20 @@ body {
 	// Blocks wrapper
 	& > .edit-post-visual-editor__post-title-wrapper,
 	& > .block-editor-block-list__layout.is-root-container {
-		@include mixins.trim;
 		& > * {
-			width: var(--element--max-width);
+			width: var(--element--width);
+			&[data-align="full"] {
+				&:first-child {
+					& > * {
+						margin-top: 0 !important;
+					}
+				}
+				&:last-child {
+					& > * {
+						margin-bottom: 0 !important;
+					}
+				}
+			}
 		}
 		*:not(.components-placeholder):not(.components-placeholder *) {
 			max-width: var(--element--max-width);
@@ -43,7 +54,7 @@ body {
 			.wp-block,
 			&.wp-block {
 				&[data-align="full"] {
-					& > *:not(.wp-block-cover) {
+					& > *:not(.wp-block-cover):not(.wp-block-group) {
 						margin-top: var(--element--vertical-margin);
 						margin-bottom: var(--element--vertical-margin);
 					}

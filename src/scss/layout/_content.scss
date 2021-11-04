@@ -5,9 +5,20 @@
 
 // Front end
 #content article .entry-content {
-	@include mixins.trim;
 	& > * {
 		width: var(--element--width);
+		&.alignfull {
+			&:first-child {
+				& > * {
+					margin-top: 0 !important;
+				}
+			}
+			&:last-child {
+				& > * {
+					margin-bottom: 0 !important;
+				}
+			}
+		}
 	}
 	* {
 		// background: rgba(0, 0, 255, 0.05);

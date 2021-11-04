@@ -12,7 +12,7 @@
 
 	// Widths
 	--element--width: calc( 100% - ( 2 * var(--element--horizontal-margin) ) );
-	--element--max-width: calc( 120rem + 1px );
+	--element--max-width: 120rem;
 	--element--max-width-wide: 140rem;
 	--element--max-width-full: 100%;
 
