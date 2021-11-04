@@ -14,7 +14,7 @@
 	--element--width: calc( 100% - ( 2 * var(--element--horizontal-margin) ) );
 	--element--max-width: calc( 120rem + 1px );
 	--element--max-width-wide: 140rem;
-	--element--max-width-full: none;
+	--element--max-width-full: 100%;
 
 	/**
 	*  Type
@@ -48,6 +48,10 @@
   // .wp-block-gb-block-posts
   --element--gp-posts-row-gap: 1.5rem;
   --element--gp-posts-column-gap: 2rem;
+	// .wp-block-cover (wide & full)
+	--element--cover-padding: max(var(--element--horizontal-margin), calc(( 100vw - var(--element--max-width) ) / 2 + var(--element--horizontal-margin)));
+	--element--cover-width: calc(( 100vw - var(--element--max-width) ) / 2 + var(--element--horizontal-margin) + var(--element--max-width));
+	// --element--cover-max-width: calc(( 100vw - var(--element--max-width) ) / 2 + var(--element--horizontal-margin) + var(--element--wide-width));
 }
 
 

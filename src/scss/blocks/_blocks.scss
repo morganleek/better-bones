@@ -25,6 +25,10 @@
 @mixin wp-block-cover {
   .wp-block-cover {
 		padding: 0;
+		&.alignfull {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
 		.wp-block-cover__image-background {
 			margin-top: 0 !important;
 			margin-bottom: 0 !important;
@@ -42,21 +46,26 @@
 				padding-left: 0;
 				padding-right: 0;
 				.wp-block-cover__inner-container {
-					max-width: calc(( 100vw - var(--element--max-width) ) / 2 + var(--element--horizontal-margin) + var(--element--max-width));
+					max-width: var(--element--cover-width);
 				}
 				&.is-position-top-right,
 				&.is-position-center-right,
 				&.is-position-bottom-right {
 					.wp-block-cover__inner-container {
-						padding-right: calc(( 100vw - var(--element--max-width) ) / 2 + var(--element--horizontal-margin));
+						padding-right: var(--element--cover-padding); // max(var(--element--horizontal-margin), calc(( 100vw - var(--element--max-width) ) / 2 + var(--element--horizontal-margin)));
 					}
 				}
 				&.is-position-top-left,
 				&.is-position-center-left,
 				&.is-position-bottom-left {
 					.wp-block-cover__inner-container {
-						padding-left: calc(( 100vw - var(--element--max-width) ) / 2 + var(--element--horizontal-margin));
+						padding-left: var(--element--cover-padding); // max(var(--element--horizontal-margin), calc(( 100vw - var(--element--max-width) ) / 2 + var(--element--horizontal-margin)));
 					}
+				}
+			}
+			&.alignwide {
+				.wp-block-cover__inner-container {
+					max-width: var(--element--cover-wide-padding);
 				}
 			}
 			.wp-block-cover__inner-container {
@@ -65,7 +74,6 @@
 			}
 		}
 	}
-	
 }
 
 @mixin wp-block-image {
@@ -96,8 +104,8 @@
     margin-bottom: var(--element--vertical-margin);
 		.wp-block-column {
 			@include mixins.trim;
-			margin-top: 0;
-			margin-bottom: 0;
+			margin-top: 0 !important;
+			margin-bottom: 0 !important;
 			&:not(:first-child) {
 				@media (min-width: 600px) { 
 					margin-left: var(--element--horizontal-margin-small);

@@ -1,4 +1,5 @@
 @use "alignment";
+@use "../components/mixins";
 @use "../blocks/blocks";
 @use "../blocks/blocks-editor";
 
@@ -11,31 +12,44 @@ body {
 	// Blocks wrapper
 	& > .edit-post-visual-editor__post-title-wrapper,
 	& > .block-editor-block-list__layout.is-root-container {
+		@include mixins.trim;
 		& > * {
-			width: var(--element--width);
+			width: var(--element--max-width);
 		}
 		*:not(.components-placeholder):not(.components-placeholder *) {
 			max-width: var(--element--max-width);
 			margin-left: auto;
 			margin-right: auto;
+			&[data-align="full"], [data-align="full"] {
+				max-width: var(--element--max-width-full);
+				width: 100%;
+			}
+			&[data-align="wide"], [data-align="wide"] {
+				max-width: var(--element--max-width-wide);
+				width: 100%;
+			}
+			
+			.wp-block,
+			&.wp-block,
+			[class^="wp-block-"],
 			&[class^="wp-block-"] {
-				margin-top: var(--element--vertical-margin);
-				margin-bottom: var(--element--vertical-margin);
-				&.alignwide,
-				&.alignfull {
-					&.has-background {
-						margin-top: 0;
-						margin-bottom: 0;
+				&:not([data-align="full"]) {
+					margin-top: var(--element--vertical-margin);
+					margin-bottom: var(--element--vertical-margin);
+				}
+			}
+			
+			// Full width margins
+			.wp-block,
+			&.wp-block {
+				&[data-align="full"] {
+					& > *:not(.wp-block-cover) {
+						margin-top: var(--element--vertical-margin);
+						margin-bottom: var(--element--vertical-margin);
 					}
 				}
 			}
 		}
-		// block-editor-block-list__block wp-block is-selected wp-block-columns
-		// & > * { // :not(.block-editor-block-list__block)
-		// 	* {
-		// 		width: auto;
-		// 	}
-		// }
 	
 		[data-align="full"] {
 			max-width: var(--element--max-width-full);
@@ -44,19 +58,6 @@ body {
 		[data-align="wide"] {
 			max-width: var(--element--max-width-wide);
 		}
-		
-		// .block-variation-picker__variations.block-editor-block-variation-picker__variations
-		// .components-placeholder {
-		// 	width: 100%;
-		// 	.components-placeholder__fieldset { 
-		// 		width: 100%;
-		// 	}
-		// }
-		// .components-placeholder,
-		// .components-placeholder.components-placeholder,
-		// .components-placeholder.components-placeholder .components-placeholder__fieldset {
-		// 	width: 100%;
-		// }
 	
 		// Blocks
 		@include blocks.core;	
