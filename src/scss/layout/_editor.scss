@@ -44,7 +44,7 @@ body {
 			&.wp-block,
 			[class^="wp-block-"],
 			&[class^="wp-block-"] {
-				&:not([data-align="full"]) {
+				&:not([data-align="full"]):not(.rich-text) {
 					margin-top: var(--element--vertical-margin);
 					margin-bottom: var(--element--vertical-margin);
 				}
