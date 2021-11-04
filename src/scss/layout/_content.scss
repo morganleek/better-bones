@@ -1,9 +1,11 @@
 @use "alignment";
+@use "../components/mixins";
 @use "../blocks/blocks";
 
 
 // Front end
 #content article .entry-content {
+	@include mixins.trim;
 	& > * {
 		width: var(--element--width);
 	}
@@ -24,12 +26,6 @@
 			}
 		}
 	}
-
-	// & > * {
-	// 	* {
-	// 		width: auto;
-	// 	}
-	// }
 
 	.alignfull {
 		max-width: var(--element--max-width-full);
