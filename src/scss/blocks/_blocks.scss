@@ -34,6 +34,9 @@
 			padding-left: var(--element--horizontal-margin);
 			padding-right: var(--element--horizontal-margin);
 		}
+		&:not(.has-custom-content-position) {
+			text-align: center;
+		}
 		&.has-custom-content-position {
 			&.alignfull {
 				padding-left: 0;
