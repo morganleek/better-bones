@@ -44,9 +44,16 @@ body {
 			&.wp-block,
 			[class^="wp-block-"],
 			&[class^="wp-block-"] {
+				@include blocks.core;	
+				@include blocks-editor.core;	
+				
 				&:not([data-align="full"]):not(.rich-text) {
 					margin-top: var(--element--vertical-margin);
 					margin-bottom: var(--element--vertical-margin);
+
+					// Blocks
+					@include blocks.core;	
+					@include blocks-editor.core;	
 				}
 			}
 			
@@ -69,10 +76,6 @@ body {
 		[data-align="wide"] {
 			max-width: var(--element--max-width-wide);
 		}
-	
-		// Blocks
-		@include blocks.core;	
-		@include blocks-editor.core;	
 	}
 	
 	// Title wrapper

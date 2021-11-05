@@ -26,11 +26,12 @@ body {
 .edit-post-visual-editor__post-title-wrapper {
 	border-bottom: 1px solid #e0e0e0;
 	.wp-block.editor-post-title.editor-post-title__block {
-		margin-top: 0;
+		margin: 0 !important;
 		.editor-post-title__input {
-			padding: 0.5em 0;
-			font-size: 1.5em;
-			padding-left: 0.5em;
+			// padding: 0.5em !important;
+			font-size: 2.4rem;
+			font-family: sans-serif;
+			margin: 0 var(--element--horizontal-margin-small);
 		}
 	}
 }
