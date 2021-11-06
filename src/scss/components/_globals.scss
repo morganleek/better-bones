@@ -9,6 +9,7 @@
 	--element--horizontal-margin: 3rem;
 	--element--horizontal-margin-small: 2rem;
 	--element--vertical-margin: 3rem;
+	--element--vertical-margin-small: 2rem;
 
 	// Widths
 	--element--width: calc( 100% - ( 2 * var(--element--horizontal-margin) ) );
@@ -35,6 +36,16 @@
 	// Links
 	--element--anchor-color: #385E72;
 	--element--anchor-color-hover: #6AABD2;
+	// Forms
+	--element--form--line-height: 1.3em;
+	--element--form--color: #0c0c0c;
+	--element--form--font: sans-serif;
+	--element--form--weight: 400;
+	--element--form--border-size: 1px;
+	--element--form--border-color: #0c0c0c;
+	--element--form--border-radius: 0;
+	--element--form--padding-vertical: 8px;
+	--element--form--padding-horizontal: 10px;
 
 	/**
 	*  Blocks
