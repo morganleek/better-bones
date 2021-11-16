@@ -12,14 +12,14 @@ document.addEventListener( "DOMContentLoaded", () => {
 	// 	// Dark Mode
 	// 	document.head.insertAdjacentHTML(
 	// 		'beforeend',
-	// 		favicons.replace(/%path%/g, site.template_directory + '/dist/images/favicon/favicon-dark')
+	// 		favicons.replace(/%path%/g, site.template_uri + '/dist/images/favicon/favicon-dark')
 	// 	);
 	// }
 	// else {
 	// 	// Light Mode
 	// 	document.head.insertAdjacentHTML(
 	// 		'beforeend',
-	// 		favicons.replace(/%path%/g, site.template_directory + '/dist/images/favicon/favicon-light')
+	// 		favicons.replace(/%path%/g, site.template_uri + '/dist/images/favicon/favicon-light')
 	// 	);
 	// }
 

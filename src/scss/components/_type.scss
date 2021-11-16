@@ -134,7 +134,9 @@
 
 // Form fields
 @mixin form {
-  --element--width: auto;
+  form {
+    --element--width: auto;
+  }
   textarea,
   input[type="date"],
   input[type="datetime-local"],

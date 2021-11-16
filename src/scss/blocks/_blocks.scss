@@ -96,8 +96,9 @@
 			}
 		}
 		img {
+			--element--max-width: 100%;
 			height: auto;
-			max-width: 100%;
+			// max-width: 100%;
       display: block;
 		}
 		
@@ -150,6 +151,11 @@
 								margin-top: 0;
 						}
 					}
+				}
+			}
+			&:nth-child(odd) {
+				@media (min-width: 600px) and (max-width: 781px) {
+					margin-left: 0;	
 				}
 			}
 
