@@ -12,13 +12,16 @@
   @include wp-block-navigation;
   @include wp-block-latest-posts__list;
 	@include wp-block-media;
+	@include wp-block-pullquote;
 	@include wp-block-embed;
   @include wp-block-gallery;
 	@include wp-block-gb-block-posts;
 	@include wp-embed-responsive;
 	@include wp-block-separator;
+	@include wp-block-site-logo;
 	@include wp-block-spacer;
 	@include wp-block-social-links;
+	@include wp-block-verse;
   // @include wp-block-custom-block;
 }
 
@@ -111,6 +114,8 @@
     margin-bottom: var(--element--vertical-margin);
 		.wp-block-column {
 			margin: 0;
+			min-width: 0;
+			min-height: 0;
 			@media (min-width: 600px) { 
 				@include mixins.trim;
 			}
@@ -191,7 +196,7 @@
 @mixin wp-block-buttons {
   .wp-block-buttons, 
 	&.wp-block-buttons {
-		column-gap: var(--element--button-vertical-margin);
+		gap: var(--element--button-vertical-margin);
 		.wp-block-button {
 			margin: 0;
 			&:first-child {
@@ -225,11 +230,11 @@
 			margin-top: 0;
 			margin-bottom: 0;
 		}
-		&:not(.is-style-stacked) {
-			.wp-block-media-text__content {
-				@include mixins.trim;
-			}
+		.wp-block-media-text__content {
+			@include mixins.trim;
+			padding: var(--element--vertical-margin) var(--element--horizontal-margin);
 		}
+		// &:not(.is-style-stacked) {}
 		&.is-style-stacked {
 			grid-template-columns: auto;
 			grid-template-rows: auto auto;
@@ -258,6 +263,11 @@
 	&.wp-block-group {
 		@include mixins.trim;
 
+		&.alignfull,
+		&.alignwide {
+			padding-left: var(--element--horizontal-margin);
+			padding-right: var(--element--horizontal-margin);
+		}
 		&.has-background {
 			padding: var(--element--vertical-margin) var(--element--horizontal-margin);
 		}
@@ -387,5 +397,33 @@
 	&.wp-block-social-links {
 
 
+	}
+}
+
+@mixin wp-block-pullquote {
+	.wp-block-pullquote,
+	&.wp-block-pullquote {
+		blockquote {
+			@include mixins.trim;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
+@mixin wp-block-verse {
+	.wp-block-verse,
+	&.wp-block-verse {
+		font-style: italic;
+	}
+}
+
+@mixin wp-block-site-logo {
+	.wp-block-site-logo,
+	&.wp-block-site-logo {
+		&.is-default-size img {
+			width: 120px;
+			height: auto;
+		}
 	}
 }

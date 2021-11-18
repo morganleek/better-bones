@@ -91,6 +91,15 @@
   .wp-block-group, &.wp-block-group {
 		&.has-background {}
 	}
+	
+	&[data-align="full"],
+	&[data-align="wide"] {
+		& > .wp-block-group {
+			padding-left: var(--element--horizontal-margin);
+			padding-right: var(--element--horizontal-margin);
+			// &:not(.has-background) {}
+		}
+	}
 }
 
 @mixin wp-block-navigation {

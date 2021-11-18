@@ -14,7 +14,14 @@ body {
 	& > .block-editor-block-list__layout.is-root-container {
 		& > * {
 			width: var(--element--width);
-			&[data-align="full"] {
+			margin-left: auto;
+			margin-right: auto;
+			&[data-align="full"],
+			&[data-align="wide"] {
+				& > * {
+					margin-left: auto;
+					margin-right: auto;
+				}
 				&:first-child {
 					& > * {
 						margin-top: 0 !important;
@@ -29,8 +36,6 @@ body {
 		}
 		*:not(.components-placeholder):not(.components-placeholder *) {
 			max-width: var(--element--max-width);
-			margin-left: auto;
-			margin-right: auto;
 			&[data-align="full"], [data-align="full"] {
 				max-width: var(--element--max-width-full);
 				width: 100%;
@@ -47,13 +52,25 @@ body {
 				@include blocks.core;	
 				@include blocks-editor.core;	
 				
-				&:not([data-align="full"]):not(.rich-text) {
+				&:not([data-align="full"]):not([data-align="wide"]):not(.rich-text) {
 					margin-top: var(--element--vertical-margin);
 					margin-bottom: var(--element--vertical-margin);
 
 					// Blocks
 					@include blocks.core;	
 					@include blocks-editor.core;	
+				}
+				&[class="wp-block"] {
+					& > * {
+						&:not(.has-background) {
+							margin-top: var(--element--vertical-margin);
+							margin-bottom: var(--element--vertical-margin);
+						}
+					}
+				}
+				&:not([data-align="full"]):not([data-align="wide"]) {
+					// Apply margins if first block has no background
+
 				}
 			}
 			

@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 document.addEventListener( "DOMContentLoaded", () => {
 	// // Favicons
 	// const favicons = '<link rel="apple-touch-icon" sizes="180x180" href="%path%/apple-touch-icon.png">' +
@@ -24,12 +22,14 @@ document.addEventListener( "DOMContentLoaded", () => {
 	// }
 
 	// Hamburger
-	let hamburgerState = false;
-	$( '.hamburger' ).on( 'click', function() { 
-		$( this ).toggleClass( 'is-active', hamburgerState );
-		$( 'body' ).toggleClass( 'nav-is-active', hamburgerState );
-		hamburgerState = !hamburgerState;
+	
+	document.querySelector( '.hamburger' )?.addEventListener( 'click', ( e ) => {
+		document.querySelector( '.hamburger' ).classList.toggle( 'is-active' );
 	} );
+	// 	$( this ).toggleClass( 'is-active', hamburgerState );
+	// 	$( 'body' ).toggleClass( 'nav-is-active', hamburgerState );
+	// 	hamburgerState = !hamburgerState;
+	// } );
 
 	// Lazyloading finished
 	// const img = document.querySelector( 'img' );
