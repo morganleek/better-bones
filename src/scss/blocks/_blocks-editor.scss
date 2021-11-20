@@ -58,9 +58,7 @@
 }
 
 @mixin wp-block-image {
-  .wp-block-image, &.wp-block-image {
-		
-	}
+  .wp-block-image, &.wp-block-image {}
 }
 
 @mixin wp-block-columns {

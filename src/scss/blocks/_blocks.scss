@@ -104,7 +104,15 @@
 			// max-width: 100%;
       display: block;
 		}
-		
+	}
+
+	& > .wp-block-image {
+		&.alignwide,
+		&.alignfull {
+			img {
+				width: 100%;
+			}
+		}
 	}
 }
 

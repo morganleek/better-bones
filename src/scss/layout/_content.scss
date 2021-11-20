@@ -7,10 +7,12 @@
 #content article .entry-content {
 	& > * {
 		width: var(--element--width);
+		max-width: var(--element--max-width);
 		margin-left: auto;
 		margin-right: auto;
 		&.alignfull,
 		&.alignwide {
+			width: 100%;
 			& > * {
 				margin-left: auto;
 				margin-right: auto;
@@ -26,13 +28,20 @@
 				}
 			}
 		}
-	}
-	* {
-		// background: rgba(0, 0, 255, 0.05);
-		max-width: var(--element--max-width);
+		&.alignfull {
+			max-width: var(--element--max-width-full);
+		}
+		&.alignwide {
+			max-width: var(--element--max-width-wide);
+		}
 		&[class*="wp-block-"] {
 			margin-top: var(--element--vertical-margin);
 			margin-bottom: var(--element--vertical-margin);
+		}
+	}
+	* {
+		// background: rgba(0, 0, 255, 0.05);
+		&[class*="wp-block-"] {
 			&.alignwide,
 			&.alignfull {
 				&.has-background {
@@ -41,15 +50,6 @@
 				}
 			}
 		}
-	}
-
-	.alignfull {
-		max-width: var(--element--max-width-full);
-		width: 100%;
-	}
-	.alignwide {
-		max-width: var(--element--max-width-wide);
-		width: 100%;
 	}
 
 	// Blocks
