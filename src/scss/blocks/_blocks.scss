@@ -196,7 +196,8 @@
 @mixin wp-block-buttons {
   .wp-block-buttons, 
 	&.wp-block-buttons {
-		gap: var(--element--button-vertical-margin);
+		row-gap: calc(var(--element--button-vertical-margin) / 2);
+		column-gap: var(--element--button-vertical-margin);
 		.wp-block-button {
 			margin: 0;
 			&:first-child {
@@ -395,7 +396,14 @@
 @mixin wp-block-social-links {
 	.wp-block-social-links, 
 	&.wp-block-social-links {
-
+		row-gap: calc(var(--element--button-vertical-margin) / 2);
+		column-gap: calc(var(--element--button-vertical-margin) / 2);
+		.wp-social-link {
+			margin: 0;
+			.wp-block-social-link-anchor {
+				margin: 0;
+			}
+		}
 
 	}
 }
