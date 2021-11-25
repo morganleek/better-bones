@@ -16,3 +16,22 @@
 
 		return $html;
 	}
+
+	// Set default layout for post types
+	// function _themename_default_post_type_templates() {
+  //   global $wp_post_types;
+
+  //   $wp_post_types['post']->template = array(
+  //     array( 'core/image', array(
+  //         'align' => 'left',
+  //     ) ),
+  //     array( 'core/heading', array(
+  //         'placeholder' => 'Add Author...',
+  //     ) ),
+  //     array( 'core/paragraph', array(
+  //         'placeholder' => 'Add Description...',
+  //     ) )
+  //   );
+  // }
+
+  // add_action( 'init', '_themename_default_post_type_templates', 1 );
