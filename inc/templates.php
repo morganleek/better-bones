@@ -35,3 +35,12 @@
   // }
 
   // add_action( 'init', '_themename_default_post_type_templates', 1 );
+
+	// Not full understood yet
+	// function _themename_default_content( $post_content, $post ) {
+	// 	___( $post_content );
+	// 	___( $post );
+	// 	die();
+	// }
+
+	// add_filter( 'default_content', '_themename_default_content', 10, 2 );
