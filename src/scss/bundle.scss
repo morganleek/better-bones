@@ -17,18 +17,18 @@
 @use 'plugins/hamburgers';
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  // Colours
-  background-color: var(--wp--preset--color--white);
+	// Colours
+	background-color: var(--wp--preset--color--white);
 
-  // Core Elements
-  @include type.base;
-  @include type.form;
+	// Core Elements
+	@include type.base;
+	@include type.form;
 
-  // Plugins
-  @extend %wpcf7;
-  @extend %wp-everything-image !optional; 
+	// Plugins
+	@extend %wpcf7;
+	@extend %wp-everything-image !optional; 
 }

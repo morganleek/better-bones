@@ -15,7 +15,7 @@
 @use 'plugins/wpcf7';
 
 body {
-  @include type.base;
+	@include type.base;
 
 	:root {
 		font-size: 10px;

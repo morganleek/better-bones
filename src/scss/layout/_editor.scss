@@ -13,10 +13,7 @@ body {
 	& > .edit-post-visual-editor__post-title-wrapper,
 	& > .block-editor-block-list__layout.is-root-container {
 		& > * {
-			width: var(--element--width);
-			max-width: var(--element--max-width);
-			margin-left: auto;
-			margin-right: auto;
+			@include mixins.width;
 			&[data-align="full"],
 			&[data-align="wide"] {
 				& > * {
