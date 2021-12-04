@@ -17,7 +17,7 @@
 }
 
 @mixin wp-block {
-	.wp-block, &.wp-block {
+	.wp-block {
 		// [data-align="left"],
 		&[data-align="full"] {
 			& > * {
@@ -54,21 +54,21 @@
 }
 
 @mixin wp-block-cover {
-  .wp-block-cover, &.wp-block-cover {}
+  .wp-block-cover {}
 }
 
 @mixin wp-block-image {
-  .wp-block-image, &.wp-block-image {}
+  .wp-block-image {}
 }
 
 @mixin wp-block-columns {
-  .wp-block-columns, &.wp-block-columns {
+  .wp-block-columns {
 		.wp-block-column {}
 	}
 }
 
 @mixin wp-block-buttons {
-  .wp-block-buttons, &.wp-block-buttons {
+  .wp-block-buttons {
 		.wp-block-button {
 			.wp-block-button__link {}
 		}
@@ -76,17 +76,17 @@
 }
 
 @mixin wp-block-quote {
-  .wp-block-quote, &.wp-block-quote {
+  .wp-block-quote {
     // p {}
   }
 }
 
 @mixin wp-block-media-text {
-  .wp-block-media-text_content, &.wp-block-media-text_content {}
+  .wp-block-media-text_content {}
 }
 
 @mixin wp-block-group {
-  .wp-block-group, &.wp-block-group {
+  .wp-block-group {
 		&.has-background {}
 	}
 	
@@ -101,15 +101,15 @@
 }
 
 @mixin wp-block-navigation {
-  .wp-block-navigation, &.wp-block-navigation {}
+  .wp-block-navigation {}
 }
 
 @mixin wp-block-latest-posts__list {
-  .wp-block-latest-posts__list, &.wp-block-latest-posts__list {}
+  .wp-block-latest-posts__list {}
 }
 
 @mixin wp-block-gallery {
-  .wp-block-gallery, &.wp-block-gallery {}
+  .wp-block-gallery {}
 }
 
 // @mixin wp-block-wp-block-custom-block {

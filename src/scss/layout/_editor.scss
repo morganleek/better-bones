@@ -55,9 +55,6 @@ body {
 				}
 			}
 		}
-
-		@include blocks.core;	
-		@include blocks-editor.core;	
 	}
 	
 	// Title wrapper
@@ -69,4 +66,7 @@ body {
 			width: 100% !important;
 		}
 	}
+
+	@include blocks.core;	
+	@include blocks-editor.core;	
 }
