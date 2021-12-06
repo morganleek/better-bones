@@ -483,8 +483,8 @@ body ol li, body ul li, body dl li {
   margin-bottom: 0.5em;
 }
 body ol ol, body ol ul, body ol dl, body ul ol, body ul ul, body ul dl, body dl ol, body dl ul, body dl dl {
-  margin-top: calc(var(--element--paragrah-margin) / 3);
-  margin-bottom: calc(var(--element--paragrah-margin) / 3);
+  margin-top: calc( var(--element--paragrah-margin) / 3 );
+  margin-bottom: calc( var(--element--paragrah-margin) / 3 );
 }
 body iframe {
   max-width: 100%;
