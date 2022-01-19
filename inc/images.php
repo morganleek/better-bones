@@ -11,6 +11,14 @@
 			'450' => array(550, 0, false),
 			'1' => array(402, 0, false) 
 		);
+
+		// $size_queries['.my-custom-group .wp-block-image img'] = array(
+		// 	'1200' => array(944, 0, false), 
+		// 	'600' => array(992, 0, false), 
+		// 	'450' => array(550, 0, false),
+		// 	'1' => array(402, 0, false) 
+		// );
+
 		// // Covers
 		// $size_queries['.wp-block-cover.alignfull img'] = array(
 		// 	'1500' => array( 960, 0, false ),
