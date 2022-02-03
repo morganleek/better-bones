@@ -1,10 +1,26 @@
 <?php
-
+	// You'll need to update _themename youself here
 	function _themename_post_template_layout() {
 		$html = '';
 
 		if( has_post_thumbnail() ) {
-			$html .= '<div class="image-outer">' . get_post_thumbnail_id() . '</div>';
+			if( function_exists( 'wei_image' ) ) {
+				$html .= wei_image( // Image as Picture tag
+					get_post_thumbnail_id(), 
+					array(
+						'type' => 'image',
+						'sizes' => array(
+							'768' => array(768, 400, true), 
+							'1' => array(375, 0, false) 
+						),
+						'content' => '<h3>' . get_the_title() . '</h3>',
+						'return' => true
+					)
+				);
+			}
+			else {
+				$html .= get_the_post_thumbnail();
+			}
 		}
 		$html .= '<h3>' . get_the_title() . '</h3>';
 
