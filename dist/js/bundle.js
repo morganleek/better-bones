@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/VM Drives/Sites/wordpress/wp-content/themes/better-bones/src/js/bundle.js */"./src/js/bundle.js");
+module.exports = __webpack_require__(/*! /Users/morganleek/Sites/MAMPPro/bones/wp-content/themes/better-bones/src/js/bundle.js */"./src/js/bundle.js");
 
 
 /***/ })
